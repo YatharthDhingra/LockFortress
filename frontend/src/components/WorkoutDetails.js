@@ -5,7 +5,7 @@ import { useState } from 'react'
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
-const WorkoutDetails = ({ workout }) => {
+const WorkoutDetails = ({ workout, verify }) => {
   const { dispatch } = useWorkoutsContext()
   const { user } = useAuthContext()
   const [flag, setFlag] = useState(null)
@@ -37,8 +37,9 @@ const WorkoutDetails = ({ workout }) => {
   return (
     <div className="workout-details">
       <h4>{workout.title}</h4>
-      {!flag && <button onClick={viewPswd}>View Password</button>}
-      {flag && <p><strong>Password: </strong>{workout.load}</p>}
+      {!verify && <p>Verify OTP first</p>}
+      {verify && !flag && <button onClick={viewPswd}>View Password</button>}
+      {verify && flag && <p><strong>Password: </strong>{workout.load}</p>}
       <p><strong>Tags: </strong>{workout.reps}</p>
       <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
       <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
