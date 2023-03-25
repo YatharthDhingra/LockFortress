@@ -11,7 +11,7 @@ const Feature = () => {
     const mystyle = {
         backgroundColor: "white",
         color: "black",
-        border: "2px solid green",
+        border: "2px solid #3D0000",
         padding: "10px 20px",
         textAlign: "center",
         textDecoration: "none",
@@ -43,12 +43,15 @@ const Feature = () => {
     return (
         <div className="">
             <center>
+                <br />
+                <br />
+                <br />
                 <Link to="/home" style={mystyle}>🔐 Password Manager</Link>
                 <br />
                 <br />
                 <br />
                 <br />
-                <Link to="" style={mystyle}>💪 Password Strenth Checker/Generator</Link>
+                <Link to="" style={mystyle}>💪 Password Strength Checker/Generator</Link>
                 <br />
                 <br />
                 <br />

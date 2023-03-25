@@ -14,12 +14,12 @@ const Navbar = () => {
     <header>
       <div className="container">
         <Link to="/">
-          <h1>Pass Docs</h1>
+          <h1>LockFortress</h1>
         </Link>
         <nav>
           {user && (
             <div>
-              <span>{user.email}</span>
+              <span style={{ "color": "white" }}>Hi 👋 {user.email}</span>
               <button onClick={handleClick}>Log out</button>
             </div>
           )}
@@ -30,8 +30,8 @@ const Navbar = () => {
             </div>
           )}
         </nav>
-      </div>
-    </header>
+      </div >
+    </header >
   )
 }
 
