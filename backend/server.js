@@ -31,6 +31,10 @@ app.get("/fileshare", (req, res) => {
   res.render("index")
 })
 
+app.get("/landingpage", (req, res) => {
+  res.render("landingpage")
+})
+
 app.post("/upload", upload.single("file"), async (req, res) => {
   const fileData = {
     path: req.file.path,

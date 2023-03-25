@@ -8,6 +8,17 @@ import { Link } from 'react-router-dom'
 // import WorkoutForm from '../components/WorkoutForm'
 
 const Feature = () => {
+    const mystyle = {
+        backgroundColor: "white",
+        color: "black",
+        border: "2px solid green",
+        padding: "10px 20px",
+        textAlign: "center",
+        textDecoration: "none",
+        display: "inline - block",
+        fontSize: "30px"
+
+    };
     // const { workouts, dispatch } = useWorkoutsContext()
     // const { user } = useAuthContext()
     // const [searchTerm, setSearchTerm] = useState('')
@@ -31,16 +42,25 @@ const Feature = () => {
 
     return (
         <div className="">
-            <Link to="/home">Password Manager</Link>
-            <br />
-            <Link to="">Password Strenth Checker</Link>
-            <br />
-            <a href="http://localhost:4000/fileshare">Doc Share</a>
-            <br />
-            <Link to="">Ask AI</Link>
-            <br />
-            <Link to="">Hide in Images</Link>
-        </div>
+            <center>
+                <Link to="/home" style={mystyle}>🔐 Password Manager</Link>
+                <br />
+                <br />
+                <br />
+                <br />
+                <Link to="" style={mystyle}>💪 Password Strenth Checker/Generator</Link>
+                <br />
+                <br />
+                <br />
+                <br />
+                <a href="http://localhost:4000/fileshare" style={mystyle}>📤 Doc Share</a>
+                <br />
+                <br />
+                <br />
+                <br />
+                <a href="http://localhost:4000/landingpage" style={mystyle}>🔙Landing Page</a>
+            </center>
+        </div >
     )
 }
 

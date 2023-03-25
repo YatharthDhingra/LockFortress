@@ -5,28 +5,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 
 <body>
-    <% if (locals.fileLink !=null) { %>
-        <div style="margin-bottom: 1rem;">
-            Your file is upload
-            <a href="<%= locals.fileLink %>">
-                <%= locals.fileLink %>
-            </a>
-        </div>
-        <% } %>
-            <form action="/upload" method="post"
-                style="display: grid; gap: .5rem; grid-template-columns: auto 1fr; max-width: 500px; margin: 0 auto;"
-                enctype="multipart/form-data">
-                <label for="file">File:</label>
-                <input type="file" id="file" name="file" required />
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" />
-                <button style="grid-column: span 2;" type="submit">Share</button>
-            </form>
-            <a href="http://localhost:3000/">Go Back</a>
+    <center>
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+                <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
+                    src="https://dummyimage.com/720x600">
+                <div class="text-center lg:w-2/3 w-full">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Microdosing synth
+                        tattooed
+                        vexillologist</h1>
+                    <p class="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing
+                        tousled.
+                        Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami
+                        snackwave
+                        tilde chillwave ugh. Pour-over meditation PBR&B pickled ennui celiac mlkshk freegan photo booth
+                        af
+                        fingerstache pitchfork.</p>
+                    <div class="flex justify-center">
+                        <button
+                            class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
+                        <button
+                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <% if (locals.fileLink !=null) { %>
+            <div id="toast-success"
+                class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+                role="alert">
+                <div
+                    class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Check icon</span>
+                </div>
+                <div class="ml-3 text-sm font-normal">Your file is uploaded to :
+                    <a href="<%= locals.fileLink %>">
+                        <%= locals.fileLink %>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <% } %>
+
+                <!-- <form action="/upload" method="post" enctype="multipart/form-data"> -->
+
+                <!-- <div class="file">
+                        <label for="file">File:</label>
+                        <input type="file" id="file" name="file" required />
+                    </div> -->
+                <!-- <div class="pswd">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" />
+                    </div>
+                    <button style="grid-column: span 2;" type="submit">Share</button> -->
+                <!-- </form> -->
+
+                <div style="margin-top: 20vh;" class="w-full max-w-2xl">
+                    <form action="/upload" method="post" enctype="multipart/form-data"
+                        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-3xl font-bold mb-2" for="file">
+                                File :
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="file" id="file" name="file" required placeholder="Username">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-3xl font-bold mb-2" for="password">
+                                Password
+                            </label>
+                            <input
+                                class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                type="password" id="password" name="password" placeholder="******************">
+                            <p class="text-green-500 text-xs italic">Password is optional.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="submit">
+                                Share 📩
+                            </button>
+                            <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+                                href="http://localhost:3000/">
+                                Go Back
+                            </a>
+                        </div>
+                    </form>
+                    <p style="margin-bottom: 10vh;" class="text-center text-gray-500 text-3xl">
+                        Now take a printout 🖨 without seeing the shopkeepers DP
+                    </p>
+                </div>
+    </center>
 </body>
 
 </html>
