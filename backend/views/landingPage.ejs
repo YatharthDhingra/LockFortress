@@ -2,9 +2,10 @@
 <html>
 
 <head>
-  <title>LockFortress</title>
+  <title>Lock-Fortress</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/logo.png">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,12 +30,30 @@
     .bgimg-1 {
       background-position: center;
       background-size: cover;
-      background-color: #1aac83;
+      /* background-color:rgb(32, 14, 116); */
+      background-image: linear-gradient(#3D0000, #950101);
       min-height: 100%;
     }
 
     .w3-bar .w3-button {
       padding: 16px;
+    }
+
+    .w3-jumbo.w3-hide-small,
+    .w3-xxlarge.w3-hide-large.w3-hide-medium,
+    #yath {
+      font-weight: bold;
+      background-image: linear-gradient(45deg, #dda601, #ddd1ab);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+
+    #yathBtn {
+      font-weight: bold;
+      background-image: linear-gradient(#dda601, #ddd1ab);
     }
   </style>
 </head>
@@ -48,7 +67,6 @@
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small">
         <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -72,28 +90,26 @@
 
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-left w3-text-white" style="padding:48px">
+    <div class="w3-display-left w3-text-black" style="padding:48px">
       <span class="w3-jumbo w3-hide-small">Protect your digital fortress<br>with LockFortress.</span><br>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium">Protect your digital fortress<br>with
         LockFortress.</span><br>
-      <span class="w3-large">The strongest protection for your digital assets.</span>
-      <p><a href="http://localhost:3000/"
-          class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Get
-          Started</a>
-      </p>
-      <p><a href="#docker"
-          class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Get Docker
-          Image</a>
-      </p>
+      <span id="yath" class="w3-large">The strongest protection for your digital assets.</span>
+      <p><a href="http://localhost:3000/" id="yathBtn"
+          class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Get Started
+          ➡</a></p>
+      <p><a href="#docker" id="yathBtn"
+          class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Docker
+          Image ⬇</a></p>
     </div>
-    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <!-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
       <i class="fa fa-snapchat w3-hover-opacity"></i>
       <i class="fa fa-pinterest-p w3-hover-opacity"></i>
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
+    </div> -->
   </header>
 
   <!-- About Section -->
@@ -108,12 +124,12 @@
           data leaks in the future.</p>
       </div>
       <div class="w3-quarter">
-        <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+        <i class="fa fa-key w3-margin-bottom w3-jumbo"></i>
         <p class="w3-large">Security</p>
         <p>With us security is not a feature but a necessity.</p>
       </div>
       <div class="w3-quarter">
-        <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+        <i class="fa fa-edit w3-margin-bottom w3-jumbo"></i>
         <p class="w3-large">Design</p>
         <p>Easy to navigate and beginner friendly design.</p>
       </div>
@@ -126,6 +142,7 @@
 
     </div>
   </div>
+
 
   <script>
     // Modal Image Gallery
