@@ -11,30 +11,7 @@
 
 <body>
     <center>
-        <section class="text-gray-600 body-font">
-            <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-                <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
-                    src="https://dummyimage.com/720x600">
-                <div class="text-center lg:w-2/3 w-full">
-                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Microdosing synth
-                        tattooed
-                        vexillologist</h1>
-                    <p class="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing
-                        tousled.
-                        Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami
-                        snackwave
-                        tilde chillwave ugh. Pour-over meditation PBR&B pickled ennui celiac mlkshk freegan photo booth
-                        af
-                        fingerstache pitchfork.</p>
-                    <div class="flex justify-center">
-                        <button
-                            class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
-                        <button
-                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <% if (locals.fileLink !=null) { %>
             <div id="toast-success"
                 class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
@@ -72,8 +49,17 @@
                     </div>
                     <button style="grid-column: span 2;" type="submit">Share</button> -->
                 <!-- </form> -->
+                <section class="text-gray-600 body-font">
+                    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+                        <div class="text-center lg:w-2/3 w-full">
+                            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Send your files
+                                securely
+                                with us.</h1>
 
-                <div style="margin-top: 20vh;" class="w-full max-w-2xl">
+                        </div>
+                    </div>
+                </section>
+                <div class="w-full max-w-2xl">
                     <form action="/upload" method="post" enctype="multipart/form-data"
                         class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div class="mb-4">
@@ -94,12 +80,13 @@
                             <p class="text-green-500 text-xs italic">Password is optional.</p>
                         </div>
                         <div class="flex items-center justify-between">
-                            <button
+                            <button style="background-color:#3D0000;"
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 type="submit">
                                 Share 📩
                             </button>
-                            <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+                            <a style="color:#3D0000;"
+                                class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
                                 href="http://localhost:3000/">
                                 Go Back
                             </a>
