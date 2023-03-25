@@ -40,6 +40,7 @@ const WorkoutDetails = ({ workout, verify }) => {
       {!verify && <p>Verify OTP first</p>}
       {verify && !flag && <button onClick={viewPswd}>View Password</button>}
       {verify && flag && <p><strong>Password: </strong>{workout.load}</p>}
+      <p><strong>Password: </strong>{workout.load}</p>
       <p><strong>Tags: </strong>{workout.reps}</p>
       <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
       <span className="material-symbols-outlined" onClick={handleClick}>delete</span>

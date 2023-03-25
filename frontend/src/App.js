@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 import Feature from './pages/Feature'
+import { useEffect } from 'react'
 
 function App() {
   const { user } = useAuthContext()
