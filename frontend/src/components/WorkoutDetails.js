@@ -42,7 +42,7 @@ const WorkoutDetails = ({ workout, verify }) => {
       {verify && flag && <p><strong>Password: </strong>{workout.load}</p>}
       <p><strong>Tags: </strong>{workout.reps}</p>
       <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
-      <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
+      <span style={{ "color": "#3D0000" }} className="material-symbols-outlined" onClick={handleClick}>delete</span>
     </div>
   )
 }
