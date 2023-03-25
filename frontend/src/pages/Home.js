@@ -18,6 +18,8 @@ import WorkoutForm from '../components/WorkoutForm'
 const Home = () => {
   const { workouts, dispatch } = useWorkoutsContext()
   const { user } = useAuthContext()
+  console.log("user=" + user.user)
+
   const [searchTerm, setSearchTerm] = useState('')
 
   const [otp, setOtp] = useState("");
@@ -49,6 +51,7 @@ const Home = () => {
     const appVerifier = window.recaptchaVerifier;
 
     const formatPh = "+" + ph;
+    // const formatPh = "+91" + user.mobile;
 
     signInWithPhoneNumber(auth, formatPh, appVerifier)
       .then((confirmationResult) => {
@@ -120,7 +123,7 @@ const Home = () => {
           <div id="recaptcha-container"></div>
           {verify ? (
             <h2 className="text-center text-white font-medium text-2xl">
-              👍Login Success
+              👍OTP Verification successfull
             </h2>
           ) : (
             <div className="w-80 flex flex-col gap-4 rounded-lg p-4">

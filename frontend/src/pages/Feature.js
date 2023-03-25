@@ -35,7 +35,7 @@ const Feature = () => {
             <br />
             <Link to="">Password Strenth Checker</Link>
             <br />
-            <Link to="">Doc Share</Link>
+            <a href="http://localhost:4000/fileshare">Doc Share</a>
             <br />
             <Link to="">Ask AI</Link>
             <br />
