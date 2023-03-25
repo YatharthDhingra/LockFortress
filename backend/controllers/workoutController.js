@@ -2,11 +2,11 @@ const Workout = require('../models/workoutModel')
 const mongoose = require('mongoose')
 //Encryption Stuff
 let crypto = require('crypto');
-var key = "abcdefghijklmnopqrstuvwx";
+let key = "abcdefghijklmnopqrstuvwx";
 
 function encrptify(pt) {
-  var encrypt = crypto.createCipheriv('des-ede3', key, "");
-  var theCipher = encrypt.update(pt, 'utf8', 'base64');
+  let encrypt = crypto.createCipheriv('des-ede3', key, "");
+  let theCipher = encrypt.update(pt, 'utf8', 'base64');
   theCipher += encrypt.final('base64');
   return theCipher;
 };
