@@ -31,7 +31,7 @@ We have made LockFortress a one-stop solution for users' passwords. Firstly we p
 Team Name: Team Team
 
 * [Yatharth Dhingra](https://github.com/YatharthDhingra)
-* [Bhuvnesh Bhatt](https://github.com/https://github.com/bhuvnesh-b)
+* [Bhuvnesh Bhatt](https://github.com/bhuvnesh-b)
 * [Kunal Yadav](https://github.com/metakunal)
 
 
