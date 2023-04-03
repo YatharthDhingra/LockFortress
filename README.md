@@ -33,6 +33,7 @@ Team Name: Team Team
 * [Yatharth Dhingra](https://github.com/YatharthDhingra)
 * [Bhuvnesh Bhatt](https://github.com/bhuvnesh-b)
 * [Kunal Yadav](https://github.com/metakunal)
+* [Kaptan Singh](https://github.com/kaptan0428)
 
 
 ### Made at:
